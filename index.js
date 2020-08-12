@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const ytdl = require("ytdl-core");
 
-const PREFIX = process.env.PREFIX;
+const PREFIX = '=';
 
 var servers = {};
 var version = '1.0.0'
