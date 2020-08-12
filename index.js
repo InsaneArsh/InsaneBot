@@ -57,10 +57,8 @@ if(command === 'goli'){
     client.commands.get('goli').execute(message, args);
 }
     
-let args = message.content.substring(PREFIX.length).split(" ");
 
-switch(args[0]){
-  case 'myinfo':
+if(command === 'myinfo'){
   const embed = new Discord.MessageEmbed()
         .setTitle('User Info')
         .addField('Player Name', message.author.username)
@@ -69,8 +67,8 @@ switch(args[0]){
         .setColor(0xF1C40F)
         .setThumbnail(message.author.avatarURL())
         message.channel.send(embed);
+        }
 
-}
 
 
 
