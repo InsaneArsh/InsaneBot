@@ -31,7 +31,8 @@ client.on('message', message =>{
  
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
- 
+    
+      
     //if (command == ''){}
 
   if (command === 'ping'){
@@ -50,12 +51,25 @@ if(command === 'clear'){
     client.commands.get('clear').execute(message, args);
 }
 
-if(command === 'myinfo'){
-    client.commands.get('myinfo').execute(message, args);
-}
+
 
 if(command === 'goli'){
     client.commands.get('goli').execute(message, args);
+}
+    
+let args = message.content.substring(PREFIX.length).split(" ");
+
+switch(args[0]){
+  case 'myinfo':
+  const embed = new Discord.MessageEmbed()
+        .setTitle('User Info')
+        .addField('Player Name', message.author.username)
+        .addField('Version', version)
+        .addField('Current Server', message.guild.name)
+        .setColor(0xF1C40F)
+        .setThumbnail(message.author.avatarURL())
+        message.channel.send(embed);
+
 }
 
 
