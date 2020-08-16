@@ -48,8 +48,8 @@ if(command === 'help'){
 }
 
 if(command === 'clear'){
-  if(!args[1]) return message.reply('Error! Please Specify the number of messages you would like to delete.')  
-  message.channel.bulkDelete(args[1], true);
+   
+  message.channel.bulkDelete(5, true);
 }
 
 
