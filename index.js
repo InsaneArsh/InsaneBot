@@ -48,8 +48,7 @@ if(command === 'help'){
 }
 
 if(command === 'clear'){
-   
-  message.channel.bulkDelete(5, true);
+  message.channel.bulkDelete('args[1]', true);
 }
 
 
